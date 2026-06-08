@@ -2,7 +2,7 @@ name: Cron for Veek check-in
 
 on:
   schedule:
-    - cron: '27 11 * * *'
+    - cron: '05 13 * * *'
   workflow_dispatch:
 
 jobs:
