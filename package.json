@@ -3,8 +3,8 @@
   "version": "7.1.1",
   "private": true,
   "type": "module",
-  "repository": "git@github.com:rfoel/veek.git",
-  "author": "Rafael Franco <oi@rafaelfranco.com>",
+  "repository": "git@github.com:guimarques7/veek.git",
+  "author": "Guilherme Marques <guilherme@quickdev.com.br>",
   "license": "MIT",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
