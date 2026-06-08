@@ -2,8 +2,8 @@ name: Cron for Veek check-in
 
 on:
   schedule:
-    - cron: '0 11 * * *'
-    - cron: '1 11 * * *'
+    - cron: '7 11 * * *'
+  workflow_dispatch:
 
 jobs:
   check-in:
@@ -15,6 +15,15 @@ jobs:
         with:
           node-version: 18
 
-      - run: node index.js
+      - name: First check-in
+        run: node index.js
+        env:
+          VEEK_LINES: ${{ secrets.VEEK_LINES }}
+
+      - name: Wait one minute
+        run: sleep 60
+
+      - name: Second check-in
+        run: node index.js
         env:
           VEEK_LINES: ${{ secrets.VEEK_LINES }}
